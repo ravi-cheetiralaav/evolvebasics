@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-gradient-to-br from-slate-50 to-red-50 min-h-screen;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-xl shadow-xl;
+  }
+  
+  .glass-button {
+    @apply bg-white/20 backdrop-blur-sm border border-white/30 rounded-lg px-6 py-3 font-medium text-white hover:bg-white/30 transition-all duration-200 shadow-lg hover:shadow-xl;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-red-600 to-red-800 bg-clip-text text-transparent;
+  }
+  
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 py-16 lg:py-24;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  /* Transport-themed animations */
+  .logo-container:hover .speed-line {
+    animation: speedFlow 0.6s ease-out;
+  }
+  
+  @keyframes speedFlow {
+    0% { transform: scaleX(0); opacity: 0; }
+    50% { transform: scaleX(1); opacity: 1; }
+    100% { transform: scaleX(1.5); opacity: 0; }
+  }
+  
+  /* Enhanced truck animation */
+  .truck-enhanced {
+    transition: all 0.3s ease;
+  }
+  
+  .truck-enhanced:hover {
+    transform: translateX(2px) scale(1.1);
+    filter: drop-shadow(2px 2px 4px rgba(220, 38, 38, 0.3));
+  }
+}

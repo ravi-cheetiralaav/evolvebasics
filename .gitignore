@@ -78,6 +78,48 @@ web_modules/
 .next
 out
 
+# Next.js deployment files
+*.tgz
+
+# Environment variables
+.env
+.env.*
+!.env.example
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+
+# GitHub Pages deployment
+# Keep public/images for deployment but ignore original images folder
+/images/
+*.jpeg.bak
+*.jpg.bak
+
+# Backup files
+*.backup
+*.bak
+
 # Nuxt.js build / generate output
 .nuxt
 dist
