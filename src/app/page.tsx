@@ -14,7 +14,11 @@ import {
   ChevronLeftIcon,
   ChevronRightIcon,
   PlayIcon,
-  PauseIcon
+  PauseIcon,
+  MapIcon,
+  CubeIcon,
+  WrenchScrewdriverIcon,
+  RocketLaunchIcon
 } from '@heroicons/react/24/outline'
 import { TruckIcon as TruckSolid } from '@heroicons/react/24/solid'
 
@@ -157,43 +161,156 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="pt-20 section-padding bg-gradient-to-br from-red-50 to-red-50">
+      <section className="pt-24 pb-12 bg-gradient-to-br from-red-50 via-white to-red-50/30">
         <div className="container-custom">
-          <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
-            <div className="animate-fade-in">
+          <div className="grid lg:grid-cols-2 gap-16 items-center min-h-[85vh]">
+            <div className="animate-fade-in flex flex-col justify-center">
               <div className="flex items-center mb-8">
                 <div className="relative">
-                  <TruckSolid className="h-16 w-16 text-red-600 animate-bounce-gentle" />
-                  <div className="absolute -right-2 top-4 w-8 h-1 bg-gradient-to-r from-red-500 to-transparent rounded animate-speed-lines"></div>
-                  <div className="absolute -right-3 top-6 w-6 h-0.5 bg-gradient-to-r from-red-400 to-transparent rounded animate-speed-lines" style={{animationDelay: '0.2s'}}></div>
-                  <div className="absolute -right-4 top-8 w-4 h-0.5 bg-gradient-to-r from-red-300 to-transparent rounded animate-speed-lines" style={{animationDelay: '0.4s'}}></div>
+                  <TruckSolid className="h-20 w-20 text-red-600 animate-bounce-gentle" />
+                  <div className="absolute -right-3 top-6 w-10 h-2 bg-gradient-to-r from-red-500 to-transparent rounded animate-speed-lines"></div>
+                  <div className="absolute -right-4 top-8 w-8 h-1.5 bg-gradient-to-r from-red-400 to-transparent rounded animate-speed-lines" style={{animationDelay: '0.2s'}}></div>
+                  <div className="absolute -right-5 top-10 w-6 h-1 bg-gradient-to-r from-red-300 to-transparent rounded animate-speed-lines" style={{animationDelay: '0.4s'}}></div>
                 </div>
               </div>
               
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
                 Efficient Transport Solutions for{' '}
                 <span className="gradient-text">Everyone</span>
               </h1>
               
-              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Your reliable purchase partner for sand supply, material supply, and comprehensive transport solutions across India.
-              </p>
+              <div className="mb-8">
+                <p className="text-2xl text-red-600 font-bold mb-4">
+                  Reliable transport solutions with trust
+                </p>
+                <p className="text-xl text-gray-600 leading-relaxed">
+                  Your reliable purchase partner for sand supply, material supply, and comprehensive transport solutions across India.
+                </p>
+              </div>
               
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-6 mb-8">
                 <Link 
                   href="/services" 
-                  className="glass-button inline-flex items-center bg-red-600 hover:bg-red-700 text-white group transition-all duration-300 hover:animate-pulse-red"
+                  className="glass-button inline-flex items-center bg-red-600 hover:bg-red-700 text-white group transition-all duration-300 hover:animate-pulse-red hover:shadow-lg hover:scale-105 px-8 py-4 text-lg"
                 >
                   Our Services
-                  <ArrowRightIcon className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+                  <ArrowRightIcon className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
                 <Link 
                   href="/contact" 
-                  className="glass-button inline-flex items-center bg-white text-red-600 border-red-200 hover:bg-gray-50 group transition-all duration-300"
+                  className="glass-button inline-flex items-center bg-white text-red-600 border-2 border-red-200 hover:bg-red-50 hover:border-red-300 group transition-all duration-300 hover:shadow-lg px-8 py-4 text-lg"
                 >
                   Get Quote
-                  <ArrowRightIcon className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+                  <ArrowRightIcon className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
+              </div>
+
+              {/* Why Trust Us - Moved from right column */}
+              <div className="grid grid-cols-4 gap-6 pt-6 border-t border-gray-200">
+                <div className="text-center group cursor-pointer">
+                  <div className="text-3xl font-bold text-red-600 mb-2 group-hover:scale-110 transition-transform">500+</div>
+                  <div className="text-sm text-gray-600 font-medium">Projects</div>
+                </div>
+                <div className="text-center group cursor-pointer">
+                  <div className="text-3xl font-bold text-red-600 mb-2 group-hover:scale-110 transition-transform">50+</div>
+                  <div className="text-sm text-gray-600 font-medium">Clients</div>
+                </div>
+                <div className="text-center group cursor-pointer">
+                  <div className="text-3xl font-bold text-red-600 mb-2 group-hover:scale-110 transition-transform">10+</div>
+                  <div className="text-sm text-gray-600 font-medium">Years</div>
+                </div>
+                <div className="text-center group cursor-pointer">
+                  <div className="text-3xl font-bold text-red-600 mb-2 group-hover:scale-110 transition-transform">24/7</div>
+                  <div className="text-sm text-gray-600 font-medium">Support</div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Right Column - Compact Services & Contact Info */}
+            <div className="flex flex-col justify-center space-y-8 animate-fade-in">
+              {/* Enhanced Services Card */}
+              <div className="glass-card p-8 hover:shadow-xl transition-all duration-300 border border-red-100 hover:border-red-200">
+                <div className="flex items-center mb-6">
+                  <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl mr-4 shadow-lg">
+                    <TruckIcon className="h-7 w-7 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900">Our Services</h3>
+                    <p className="text-sm text-gray-600">Professional transport solutions</p>
+                  </div>
+                </div>
+                <div className="space-y-4">
+                  <div className="group cursor-pointer p-4 hover:bg-gradient-to-r hover:from-red-50 hover:to-transparent rounded-xl transition-all duration-300">
+                    <div className="flex items-center space-x-4">
+                      <div className="flex-shrink-0 w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center group-hover:bg-red-200 transition-colors duration-300">
+                        <MapIcon className="h-5 w-5 text-red-600" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h4 className="text-base font-semibold text-gray-900 group-hover:text-red-700 transition-colors">Sand Supply & Delivery</h4>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="group cursor-pointer p-4 hover:bg-gradient-to-r hover:from-red-50 hover:to-transparent rounded-xl transition-all duration-300">
+                    <div className="flex items-center space-x-4">
+                      <div className="flex-shrink-0 w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center group-hover:bg-red-200 transition-colors duration-300">
+                        <TruckIcon className="h-5 w-5 text-red-600" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h4 className="text-base font-semibold text-gray-900 group-hover:text-red-700 transition-colors">Material Transportation</h4>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="group cursor-pointer p-4 hover:bg-gradient-to-r hover:from-red-50 hover:to-transparent rounded-xl transition-all duration-300">
+                    <div className="flex items-center space-x-4">
+                      <div className="flex-shrink-0 w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center group-hover:bg-red-200 transition-colors duration-300">
+                        <CubeIcon className="h-5 w-5 text-red-600" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h4 className="text-base font-semibold text-gray-900 group-hover:text-red-700 transition-colors">Construction Materials</h4>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="group cursor-pointer p-4 hover:bg-gradient-to-r hover:from-red-50 hover:to-transparent rounded-xl transition-all duration-300">
+                    <div className="flex items-center space-x-4">
+                      <div className="flex-shrink-0 w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center group-hover:bg-red-200 transition-colors duration-300">
+                        <RocketLaunchIcon className="h-5 w-5 text-red-600" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h4 className="text-base font-semibold text-gray-900 group-hover:text-red-700 transition-colors">Logistics Solutions</h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* View All Services Link */}
+                <div className="mt-6 pt-4 border-t border-gray-100">
+                  <Link 
+                    href="/services"
+                    className="flex items-center justify-center w-full text-sm font-medium text-red-600 hover:text-red-700 py-3 hover:bg-red-50 rounded-lg transition-all duration-200 group"
+                  >
+                    View All Services
+                    <ArrowRightIcon className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
+                  </Link>
+                </div>
+              </div>
+
+              {/* Compact Contact CTA */}
+              <div className="glass-card p-8 bg-gradient-to-br from-red-500 to-red-600 text-white hover:shadow-xl transition-all duration-300 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-24 h-24 bg-white/10 rounded-full -translate-y-12 translate-x-12"></div>
+                <div className="relative">
+                  <h3 className="text-2xl font-bold mb-4">Ready to Get Started?</h3>
+                  <p className="mb-6 text-red-100 text-base">Contact us for a free consultation</p>
+                  <Link 
+                    href="/contact" 
+                    className="inline-flex items-center bg-white text-red-600 px-6 py-3 rounded-xl font-bold hover:bg-gray-100 transition-all duration-300 group text-base"
+                  >
+                    Contact Us Today
+                    <ArrowRightIcon className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
