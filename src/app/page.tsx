@@ -79,49 +79,49 @@ const partners = [
 
 const galleryImages = [
   {
-    src: "/images/sand-supply.jpeg",
+    src: "images/sand-supply.jpeg",
     alt: "Sand Supply Operations",
     title: "Premium Sand Supply",
     description: "High-quality sand delivery to construction sites"
   },
   {
-    src: "/images/material-transport.jpeg", 
+    src: "images/material-transport.jpeg", 
     alt: "Material Transportation",
     title: "Material Transportation",
     description: "Efficient bulk material transport solutions"
   },
   {
-    src: "/images/logistics-hub.jpeg",
+    src: "images/logistics-hub.jpeg",
     alt: "Logistics Operations",
     title: "Logistics Hub",
     description: "State-of-the-art logistics and warehousing"
   },
   {
-    src: "/images/construction-site.jpeg",
+    src: "images/construction-site.jpeg",
     alt: "Construction Support",
     title: "Construction Support",
     description: "On-site material delivery and coordination"
   },
   {
-    src: "/images/port-operations.jpeg",
+    src: "images/port-operations.jpeg",
     alt: "Port Operations",
     title: "Port Operations",
     description: "Seamless port logistics and cargo handling"
   },
   {
-    src: "/images/image-main-2.jpeg",
+    src: "images/image-main-2.jpeg",
     alt: "Fleet Management",
     title: "Fleet Management",
     description: "Modern fleet with GPS tracking systems"
   },
   {
-    src: "/images/image-3.jpeg",
+    src: "images/image-3.jpeg",
     alt: "Quality Control",
     title: "Quality Assurance",
     description: "Rigorous quality control processes"
   },
   {
-    src: "/images/image-4.jpeg",
+    src: "images/image-4.jpeg",
     alt: "Delivery Network",
     title: "Project Delivery",
     description: "Successful project completions across India"
