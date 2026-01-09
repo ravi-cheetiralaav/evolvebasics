@@ -196,41 +196,6 @@ export default function HomePage() {
                 </Link>
               </div>
             </div>
-            
-            <div className="glass-card p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Why Choose Us?</h3>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center">
-                    <TruckIcon className="h-5 w-5 text-red-600" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">Reliable Transport</h4>
-                    <p className="text-gray-600 text-sm">On-time delivery with modern fleet management</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center">
-                    <CheckCircleIcon className="h-5 w-5 text-red-600" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">Quality Materials</h4>
-                    <p className="text-gray-600 text-sm">Premium sand, coal, and construction materials</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center">
-                    <StarIcon className="h-5 w-5 text-red-600" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">Trusted Partners</h4>
-                    <p className="text-gray-600 text-sm">500+ successful projects across India</p>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -355,40 +320,6 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Gallery Stats */}
-          <div className="mt-12 glass-card p-6">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-              <div className="group">
-                <div className="flex items-center justify-center mb-2">
-                  <TruckIcon className="h-8 w-8 text-red-600 group-hover:animate-truck-drive" />
-                </div>
-                <div className="text-2xl font-bold text-gray-900 mb-1">500+</div>
-                <div className="text-sm text-gray-600">Projects Delivered</div>
-              </div>
-              <div className="group">
-                <div className="flex items-center justify-center mb-2">
-                  <BuildingOffice2Icon className="h-8 w-8 text-red-600 group-hover:animate-bounce-gentle" />
-                </div>
-                <div className="text-2xl font-bold text-gray-900 mb-1">25+</div>
-                <div className="text-sm text-gray-600">Active Sites</div>
-              </div>
-              <div className="group">
-                <div className="flex items-center justify-center mb-2">
-                  <CogIcon className="h-8 w-8 text-red-600 group-hover:animate-spin" />
-                </div>
-                <div className="text-2xl font-bold text-gray-900 mb-1">24/7</div>
-                <div className="text-sm text-gray-600">Operations</div>
-              </div>
-              <div className="group">
-                <div className="flex items-center justify-center mb-2">
-                  <PhotoIcon className="h-8 w-8 text-red-600 group-hover:animate-pulse" />
-                </div>
-                <div className="text-2xl font-bold text-gray-900 mb-1">1000+</div>
-                <div className="text-sm text-gray-600">Tons Delivered</div>
-              </div>
-            </div>
-          </div>
-
           {/* View More CTA */}
           <div className="text-center mt-8">
             <Link 
@@ -467,44 +398,134 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="section-padding">
+      {/* Why Choose Us Section */}
+      <section className="section-padding bg-gradient-to-br from-gray-50 to-red-50/30">
         <div className="container-custom">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Why Choose Evolve Basics?
-              </h2>
-              <p className="text-xl text-gray-600 mb-8">
-                We are committed to providing reliable transport solutions with trust, building lasting partnerships with our clients.
-              </p>
-              
-              <div className="grid sm:grid-cols-2 gap-4">
-                {features.map((feature, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <CheckCircleIcon className="h-6 w-6 text-green-500 flex-shrink-0" />
-                    <span className="text-gray-700 font-medium">{feature}</span>
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl mb-6 animate-pulse-red">
+              <TruckIcon className="h-8 w-8 text-white" />
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+              Why Choose <span className="gradient-text">Evolve Basics?</span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-4">
+              <span className="text-red-600 font-semibold">Reliable transport solutions with trust</span> — 
+              We are committed to building lasting partnerships through excellence in logistics and material supply.
+            </p>
+            <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-red-600 rounded-full mx-auto"></div>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            {/* Left Column - Key Benefits */}
+            <div className="space-y-8">
+              <div className="glass-card p-6 hover:scale-105 transition-all duration-300">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
+                    <CheckCircleIcon className="h-6 w-6 text-green-600" />
                   </div>
-                ))}
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Reliable Purchase Partner</h3>
+                    <p className="text-gray-600">Dependable service delivery with consistent quality standards and on-time performance you can count on.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="glass-card p-6 hover:scale-105 transition-all duration-300">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                    <CogIcon className="h-6 w-6 text-blue-600" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Efficient Transport Solutions</h3>
+                    <p className="text-gray-600">Streamlined logistics operations ensuring optimal delivery times and cost-effective transport management.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="glass-card p-6 hover:scale-105 transition-all duration-300">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
+                    <BuildingOffice2Icon className="h-6 w-6 text-purple-600" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Quality Material Supply</h3>
+                    <p className="text-gray-600">Premium sand, coal, limestone, and construction materials sourced and delivered to specification.</p>
+                  </div>
+                </div>
               </div>
             </div>
-            
-            <div className="glass-card p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Target Industries</h3>
-              <ul className="space-y-4">
-                <li className="flex items-center space-x-3">
-                  <BuildingOffice2Icon className="h-6 w-6 text-red-600" />
-                  <span className="text-gray-700">Industrial Businesses</span>
-                </li>
-                <li className="flex items-center space-x-3">
-                  <TruckIcon className="h-6 w-6 text-red-600" />
-                  <span className="text-gray-700">Ports & Maritime</span>
-                </li>
-                <li className="flex items-center space-x-3">
-                  <CogIcon className="h-6 w-6 text-red-600" />
-                  <span className="text-gray-700">Construction Companies</span>
-                </li>
-              </ul>
+
+            {/* Right Column - Additional Benefits */}
+            <div className="space-y-8">
+              <div className="glass-card p-6 hover:scale-105 transition-all duration-300">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center">
+                    <StarIcon className="h-6 w-6 text-orange-600" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Trusted Business Relationships</h3>
+                    <p className="text-gray-600">Building long-term partnerships with transparency, integrity, and customer-first approach in every interaction.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="glass-card p-6 hover:scale-105 transition-all duration-300">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center">
+                    <TruckIcon className="h-6 w-6 text-red-600" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Competitive Pricing</h3>
+                    <p className="text-gray-600">Fair, transparent pricing structures with no hidden costs, providing exceptional value for your investment.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="glass-card p-6 hover:scale-105 transition-all duration-300">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center">
+                    <CheckCircleIcon className="h-6 w-6 text-teal-600" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Timely Delivery</h3>
+                    <p className="text-gray-600">Advanced logistics planning and real-time tracking ensuring your materials arrive exactly when needed.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Stats Section */}
+          <div className="mt-16 glass-card p-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+              <div className="group">
+                <div className="flex items-center justify-center mb-3">
+                  <TruckIcon className="h-10 w-10 text-red-600 group-hover:animate-truck-drive" />
+                </div>
+                <div className="text-3xl font-bold text-gray-900 mb-1">500+</div>
+                <div className="text-sm text-gray-600 font-medium">Projects Delivered</div>
+              </div>
+              <div className="group">
+                <div className="flex items-center justify-center mb-3">
+                  <StarIcon className="h-10 w-10 text-red-600 group-hover:animate-pulse" />
+                </div>
+                <div className="text-3xl font-bold text-gray-900 mb-1">50+</div>
+                <div className="text-sm text-gray-600 font-medium">Happy Clients</div>
+              </div>
+              <div className="group">
+                <div className="flex items-center justify-center mb-3">
+                  <BuildingOffice2Icon className="h-10 w-10 text-red-600 group-hover:animate-bounce-gentle" />
+                </div>
+                <div className="text-3xl font-bold text-gray-900 mb-1">10+</div>
+                <div className="text-sm text-gray-600 font-medium">Years Experience</div>
+              </div>
+              <div className="group">
+                <div className="flex items-center justify-center mb-3">
+                  <CheckCircleIcon className="h-10 w-10 text-red-600 group-hover:animate-pulse-red" />
+                </div>
+                <div className="text-3xl font-bold text-gray-900 mb-1">24/7</div>
+                <div className="text-sm text-gray-600 font-medium">Support Available</div>
+              </div>
             </div>
           </div>
         </div>
