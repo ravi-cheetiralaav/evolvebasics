@@ -23,17 +23,18 @@ export default function Navigation() {
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-3 group">
               <div className="flex flex-col items-start">
-                <div className="relative w-14 h-8 flex items-center justify-start">
+                <div className="relative w-16 h-10 flex items-center justify-start ml-6">
                   <Image 
-                    src="/images/logo.png" 
+                    src={`${process.env.NODE_ENV === 'production' ? '/evolvebasics' : ''}/images/logo.png`}
                     alt="Evolve Building Material Supplies Co. Logo" 
-                    width={56} 
-                    height={32} 
-                    className="w-14 h-8 rounded object-contain group-hover:scale-110 transition-all duration-300"
+                    width={64} 
+                    height={40} 
+                    className="w-16 h-10 rounded object-contain group-hover:scale-110 transition-all duration-300"
                     priority
+                    unoptimized
                   />
                 </div>
-                <span className="text-3xl font-bold text-red-600 group-hover:animate-slide-right leading-none -mt-1">EVOLVE</span>
+                <span className="text-3xl font-bold text-red-600 group-hover:animate-slide-right leading-none -mt-3">EVOLVE</span>
                 <span className="text-[0.6rem] font-medium text-black tracking-wide uppercase leading-tight -mt-0.5">BUILDING MATERIAL SUPPLIES CO.</span>
               </div>
             </Link>

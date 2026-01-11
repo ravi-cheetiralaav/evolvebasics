@@ -18,25 +18,67 @@ import {
   MapIcon,
   CubeIcon,
   WrenchScrewdriverIcon,
-  RocketLaunchIcon
+  RocketLaunchIcon,
+  InboxArrowDownIcon,
+  Cog8ToothIcon,
+  SparklesIcon,
+  PresentationChartLineIcon,
+  HomeModernIcon,
+  BriefcaseIcon,
+  CommandLineIcon
 } from '@heroicons/react/24/outline'
+import {
+  CubeIcon as CubeSolid,
+  Cog8ToothIcon as CogSolid,
+  TruckIcon as TruckIconSolid
+} from '@heroicons/react/24/solid'
 import { TruckIcon as TruckSolid } from '@heroicons/react/24/solid'
 
 const services = [
   {
+    icon: CubeIcon,
+    solidIcon: CubeSolid,
+    title: 'Professional Sand Supply',
+    subtitle: 'Premium Quality Construction Sand',
+    description: 'High-quality sand supply for construction and industrial projects',
+    features: [
+      'Premium quality construction sand',
+      'River sand and manufactured sand', 
+      'Bulk delivery services',
+      'Quality testing and certification',
+      'Competitive pricing',
+      'Reliable delivery schedules'
+    ]
+  },
+  {
+    icon: Cog8ToothIcon,
+    solidIcon: CogSolid,
+    title: 'Professional Material Supply',
+    subtitle: 'Comprehensive Industrial Materials',
+    description: 'Comprehensive supply of industrial materials and raw materials',
+    features: [
+      'Coal supply for power plants',
+      'Limestone for cement industry',
+      'Gypsum for construction',
+      'Iron ore for steel production',
+      'Aggregate materials',
+      'Custom material sourcing'
+    ]
+  },
+  {
     icon: TruckIcon,
-    title: 'Sand Supply',
-    description: 'Quality sand supply to customers with reliable delivery and competitive pricing.',
-  },
-  {
-    icon: CogIcon,
-    title: 'Material Supply',
-    description: 'Coal, limestone, gypsum, iron ore, and other industrial materials.',
-  },
-  {
-    icon: BuildingOffice2Icon,
-    title: 'Transport Facility',
-    description: 'Efficient logistics and transport solutions for all your material needs.',
+    solidIcon: TruckIconSolid,
+    title: 'Professional Transport Solutions',
+    subtitle: 'Efficient Logistics Services',
+    description: 'Efficient logistics and transport services for all material types',
+    features: [
+      'Heavy-duty transport vehicles',
+      'GPS tracking and monitoring',
+      'Dedicated fleet management',
+      'Load optimization',
+      'Route planning',
+      'Real-time delivery updates'
+    ]
   },
 ]
 
@@ -68,16 +110,76 @@ const testimonials = [
 ]
 
 const partners = [
-  'Stone Craft Developers Pvt Ltd',
-  'Trendset Projects LLP',
-  'Mahidhara Projects PVT LTD',
-  'Mark Creative & Digital Agency',
-  'Siva Ram and Company',
-  'Geetha Engineering Constructions Pvt Ltd',
-  'Sri Yadadri Constructions',
-  'Vaibhavi Projects',
-  'Vaibhavi Infra Projects',
-  'Navtej Infrastructure Pvt Ltd',
+  {
+    name: 'Stone Craft Developers Pvt Ltd',
+    type: 'Development',
+    icon: HomeModernIcon,
+    color: 'text-blue-600',
+    bgColor: 'bg-blue-100'
+  },
+  {
+    name: 'Trendset Projects LLP',
+    type: 'Development', 
+    icon: HomeModernIcon,
+    color: 'text-blue-600',
+    bgColor: 'bg-blue-100'
+  },
+  {
+    name: 'Mahidhara Projects PVT LTD',
+    type: 'Development',
+    icon: HomeModernIcon,
+    color: 'text-blue-600',
+    bgColor: 'bg-blue-100'
+  },
+  {
+    name: 'Mark Creative & Digital Agency',
+    type: 'Construction',
+    icon: WrenchScrewdriverIcon,
+    color: 'text-orange-600',
+    bgColor: 'bg-orange-100'
+  },
+  {
+    name: 'Siva Ram and Company',
+    type: 'Construction',
+    icon: WrenchScrewdriverIcon,
+    color: 'text-orange-600',
+    bgColor: 'bg-orange-100'
+  },
+  {
+    name: 'Geetha Engineering Constructions Pvt Ltd',
+    type: 'Construction',
+    icon: WrenchScrewdriverIcon,
+    color: 'text-orange-600',
+    bgColor: 'bg-orange-100'
+  },
+  {
+    name: 'Sri Yadadri Constructions',
+    type: 'Infrastructure',
+    icon: RocketLaunchIcon,
+    color: 'text-green-600',
+    bgColor: 'bg-green-100'
+  },
+  {
+    name: 'Vaibhavi Projects',
+    type: 'Infrastructure',
+    icon: RocketLaunchIcon,
+    color: 'text-green-600',
+    bgColor: 'bg-green-100'
+  },
+  {
+    name: 'Vaibhavi Infra Projects',
+    type: 'Infrastructure',
+    icon: RocketLaunchIcon,
+    color: 'text-green-600',
+    bgColor: 'bg-green-100'
+  },
+  {
+    name: 'Navtej Infrastructure Pvt Ltd',
+    type: 'Projects',
+    icon: BriefcaseIcon,
+    color: 'text-purple-600',
+    bgColor: 'bg-purple-100'
+  },
 ]
 
 const galleryImages = [
@@ -471,51 +573,97 @@ export default function HomePage() {
           
           <div className="grid md:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="glass-card p-8 text-center group hover:scale-105 transition-all duration-300">
-                <div className="relative mb-6">
+              <div key={index} className="glass-card p-8 text-center group hover:scale-105 transition-all duration-500 relative overflow-hidden">
+                {/* Enhanced animated icon container */}
+                <div className="relative mb-8">
+                  {/* Main icon with sophisticated animations */}
                   {index === 0 && (
                     <div className="relative">
-                      <service.icon className="h-16 w-16 text-red-600 mx-auto group-hover:animate-truck-drive transition-all duration-300" />
-                      <div className="absolute -right-1 top-3 w-4 h-0.5 bg-gradient-to-r from-red-400 to-transparent rounded opacity-0 group-hover:opacity-100 group-hover:animate-speed-lines transition-opacity duration-300"></div>
-                      <div className="absolute -right-2 top-5 w-3 h-0.5 bg-gradient-to-r from-red-300 to-transparent rounded opacity-0 group-hover:opacity-100 group-hover:animate-speed-lines transition-opacity duration-300" style={{animationDelay: '0.1s'}}></div>
+                      {/* Sand particle effect background */}
+                      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <div className="absolute top-2 left-8 w-1 h-1 bg-amber-400 rounded-full animate-sand-fall" style={{animationDelay: '0.1s'}}></div>
+                        <div className="absolute top-4 left-12 w-0.5 h-0.5 bg-amber-500 rounded-full animate-sand-fall" style={{animationDelay: '0.3s'}}></div>
+                        <div className="absolute top-1 left-16 w-1 h-1 bg-yellow-400 rounded-full animate-sand-fall" style={{animationDelay: '0.5s'}}></div>
+                        <div className="absolute top-3 left-6 w-0.5 h-0.5 bg-amber-600 rounded-full animate-sand-fall" style={{animationDelay: '0.7s'}}></div>
+                      </div>
+                      {/* Outline icon that transforms to solid */}
+                      <service.icon className="h-16 w-16 text-red-600 mx-auto transition-all duration-500 group-hover:opacity-0 absolute inset-0" />
+                      <service.solidIcon className="h-16 w-16 text-red-600 mx-auto transition-all duration-500 opacity-0 group-hover:opacity-100 group-hover:animate-cube-float" />
+                      {/* Sparkle effects */}
+                      <SparklesIcon className="h-4 w-4 text-amber-400 absolute -top-1 -right-1 opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-all duration-300" />
                     </div>
                   )}
+                  
                   {index === 1 && (
-                    <service.icon className="h-16 w-16 text-red-600 mx-auto group-hover:animate-spin transition-all duration-700" />
+                    <div className="relative">
+                      {/* Gear mechanism effect */}
+                      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <div className="absolute -top-2 -left-2 w-8 h-8 border-2 border-red-300 rounded-full animate-gear-slow"></div>
+                        <div className="absolute -bottom-2 -right-2 w-6 h-6 border-2 border-red-400 rounded-full animate-gear-fast"></div>
+                      </div>
+                      <service.icon className="h-16 w-16 text-red-600 mx-auto transition-all duration-500 group-hover:opacity-0 absolute inset-0" />
+                      <service.solidIcon className="h-16 w-16 text-red-600 mx-auto transition-all duration-500 opacity-0 group-hover:opacity-100 group-hover:animate-spin-smooth" />
+                      {/* Energy pulse */}
+                      <div className="absolute inset-0 border-2 border-red-300 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-energy-pulse"></div>
+                    </div>
                   )}
+                  
                   {index === 2 && (
                     <div className="relative">
-                      <service.icon className="h-16 w-16 text-red-600 mx-auto group-hover:animate-bounce-gentle transition-all duration-300" />
-                      <div className="absolute inset-0 rounded-full border-2 border-red-200 opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-opacity duration-300"></div>
+                      {/* Road/movement lines */}
+                      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <div className="absolute top-8 -left-4 w-8 h-0.5 bg-gray-400 rounded animate-road-line" style={{animationDelay: '0.1s'}}></div>
+                        <div className="absolute top-10 -left-6 w-6 h-0.5 bg-gray-500 rounded animate-road-line" style={{animationDelay: '0.2s'}}></div>
+                        <div className="absolute top-12 -left-4 w-8 h-0.5 bg-gray-400 rounded animate-road-line" style={{animationDelay: '0.3s'}}></div>
+                      </div>
+                      <service.icon className="h-16 w-16 text-red-600 mx-auto transition-all duration-500 group-hover:opacity-0 absolute inset-0" />
+                      <service.solidIcon className="h-16 w-16 text-red-600 mx-auto transition-all duration-500 opacity-0 group-hover:opacity-100 group-hover:animate-truck-drive" />
+                      {/* GPS tracking dots */}
+                      <div className="absolute top-0 right-0 w-2 h-2 bg-green-500 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-gps-ping"></div>
+                      <div className="absolute bottom-0 left-0 w-1.5 h-1.5 bg-blue-500 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-gps-ping" style={{animationDelay: '0.5s'}}></div>
                     </div>
                   )}
+                  
+                  {/* Enhanced glow effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-red-500/0 via-red-400/0 to-red-500/0 group-hover:from-red-500/20 group-hover:via-red-400/30 group-hover:to-red-500/20 rounded-full transition-all duration-700 blur-xl"></div>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4 group-hover:text-red-600 transition-colors duration-300">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
-                  {service.description}
-                </p>
                 
-                {/* Animated background elements */}
-                <div className="absolute inset-0 bg-gradient-to-br from-red-50/0 to-red-100/0 group-hover:from-red-50/30 group-hover:to-red-100/20 rounded-xl transition-all duration-500"></div>
-                
-                {/* Service-specific animated elements */}
-                {index === 0 && (
-                  <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <div className="flex space-x-1">
-                      <div className="w-1 h-1 bg-red-400 rounded-full animate-bounce" style={{animationDelay: '0s'}}></div>
-                      <div className="w-1 h-1 bg-red-400 rounded-full animate-bounce" style={{animationDelay: '0.1s'}}></div>
-                      <div className="w-1 h-1 bg-red-400 rounded-full animate-bounce" style={{animationDelay: '0.2s'}}></div>
+                {/* Enhanced content */}
+                <div className="space-y-4 relative z-10">
+                  <div className="mb-4">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-red-600 transition-colors duration-300">
+                      {service.title}
+                    </h3>
+                    <p className="text-sm font-medium text-red-600 opacity-80">
+                      {service.subtitle}
+                    </p>
+                  </div>
+                  
+                  <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300 mb-6">
+                    {service.description}
+                  </p>
+                  
+                  {/* Key Features List */}
+                  <div className="opacity-0 group-hover:opacity-100 transition-all duration-500 space-y-2 text-left">
+                    <h4 className="text-sm font-semibold text-gray-800 mb-3">Key Features:</h4>
+                    <div className="grid grid-cols-2 gap-1 text-xs">
+                      {service.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-start space-x-1">
+                          <CheckCircleIcon className="h-3 w-3 text-green-500 mt-0.5 flex-shrink-0" />
+                          <span className="text-gray-600 leading-tight">{feature}</span>
+                        </div>
+                      ))}
                     </div>
                   </div>
-                )}
+                </div>
                 
-                {index === 2 && (
-                  <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <div className="w-2 h-2 bg-red-500 rounded-full animate-ping"></div>
-                  </div>
-                )}
+                {/* Enhanced background animations */}
+                <div className="absolute inset-0 bg-gradient-to-br from-red-50/0 to-red-100/0 group-hover:from-red-50/40 group-hover:to-red-100/30 rounded-xl transition-all duration-700"></div>
+                
+                {/* Floating action indicator */}
+                <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0">
+                  <ArrowRightIcon className="h-5 w-5 text-red-500 animate-bounce-horizontal" />
+                </div>
               </div>
             ))}
           </div>
@@ -704,27 +852,35 @@ export default function HomePage() {
               {partners.map((partner, index) => (
                 <div 
                   key={index} 
-                  className="group bg-white/50 backdrop-blur-sm border border-gray-200 rounded-lg p-4 text-center hover:bg-white hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer"
+                  className="group bg-white/50 backdrop-blur-sm border border-gray-200 rounded-lg p-4 text-center hover:bg-white hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer relative overflow-hidden"
+                  style={{animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both`}}
                 >
-                  {/* Partner Logo Placeholder */}
-                  <div className="w-12 h-12 bg-gradient-to-br from-red-100 to-red-200 rounded-lg mx-auto mb-3 flex items-center justify-center group-hover:from-red-500 group-hover:to-red-600 transition-all duration-300">
-                    <BuildingOffice2Icon className="h-6 w-6 text-red-600 group-hover:text-white transition-colors duration-300" />
+                  {/* Animated background gradient */}
+                  <div className={`absolute inset-0 ${partner.bgColor} opacity-0 group-hover:opacity-20 transition-opacity duration-500`}></div>
+                  
+                  {/* Partner Logo with Type-specific Icon */}
+                  <div className={`relative w-12 h-12 ${partner.bgColor} rounded-lg mx-auto mb-3 flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-sm group-hover:shadow-md`}>
+                    <partner.icon className={`h-6 w-6 ${partner.color} transition-all duration-300 group-hover:animate-pulse`} />
+                    
+                    {/* Icon ring effect */}
+                    <div className={`absolute inset-0 rounded-lg border-2 border-transparent group-hover:border-current ${partner.color} opacity-0 group-hover:opacity-100 animate-ping`}></div>
                   </div>
                   
                   {/* Partner Name */}
-                  <h3 className="text-sm font-semibold text-gray-800 group-hover:text-red-600 transition-colors duration-300 leading-tight">
-                    {partner}
+                  <h3 className={`text-sm font-semibold text-gray-800 group-hover:${partner.color.replace('text-', 'text-')} transition-colors duration-300 leading-tight mb-2`}>
+                    {partner.name}
                   </h3>
                   
-                  {/* Industry Badge */}
+                  {/* Industry Badge with Type-specific Styling */}
                   <div className="mt-2">
-                    <span className="inline-block px-2 py-1 text-xs bg-gray-100 text-gray-600 rounded-full group-hover:bg-red-100 group-hover:text-red-700 transition-all duration-300">
-                      {index < 3 ? 'Development' : index < 6 ? 'Construction' : index < 9 ? 'Infrastructure' : 'Projects'}
+                    <span className={`inline-flex items-center px-3 py-1 text-xs font-medium ${partner.bgColor} ${partner.color} rounded-full group-hover:scale-105 transition-all duration-300 shadow-sm`}>
+                      <partner.icon className="h-3 w-3 mr-1" />
+                      {partner.type}
                     </span>
                   </div>
                   
-                  {/* Hover Animation Elements */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-red-500/0 to-red-600/0 group-hover:from-red-500/5 group-hover:to-red-600/5 rounded-lg transition-all duration-500"></div>
+                  {/* Progress indicator */}
+                  <div className={`absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r ${partner.color.replace('text-', 'from-')} to-transparent group-hover:w-full transition-all duration-700 ease-out`}></div>
                 </div>
               ))}
             </div>
