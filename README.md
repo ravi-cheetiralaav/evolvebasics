@@ -34,7 +34,7 @@ Welcome to **Evolve Basics** - your reliable purchase partner for sand supply, m
 Our trusted network includes:
 - **Stone Craft Developers Pvt Ltd**
 - **Trendset Projects LLP**
-- **BuildQ**
+- **Mahidhara Projects PVT LTD**
 - **Mark Creative & Digital Agency**
 - **Siva Ram and Company**
 - **Geetha Engineering Constructions Pvt Ltd**
@@ -42,7 +42,6 @@ Our trusted network includes:
 - **Vaibhavi Projects**
 - **Vaibhavi Infra Projects**
 - **Navtej Infrastructure Pvt Ltd**
-- **Rize Developers**
 - **Other B2C Customers**
 
 ### 🎨 Brand Voice & Tone

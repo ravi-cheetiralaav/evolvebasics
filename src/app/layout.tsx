@@ -11,25 +11,25 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  title: 'Evolve Basics - Efficient Transport Solutions for Everyone',
-  description: 'Reliable purchase partner for sand supply, material supply, and transport solutions. Serving industrial businesses, ports, and construction companies across India.',
-  keywords: 'transport solutions, material supplier, sand supplier, logistics services, construction materials, industrial transport, reliable purchase partner',
-  authors: [{ name: 'Evolve Basics' }],
-  creator: 'Evolve Basics',
-  publisher: 'Evolve Basics',
+  title: 'Evolve Building Material Supplies Co. - Efficient Transport Solutions for Everyone',
+  description: 'Evolve Building Material Supplies Co. - Your reliable partner for sand supply, building materials, and transport solutions. Serving construction companies and industrial businesses across India.',
+  keywords: 'building materials supplier India, sand supplier Hyderabad, construction materials Telangana, transport solutions India, logistics services Hyderabad, coal supplier India, limestone supplier, gypsum supplier, iron ore supplier, bulk material transport, construction sand supply, river sand supplier, manufactured sand, industrial material supply, port logistics India, construction company supplier, infrastructure materials, cement industry supplier, steel industry materials, power plant coal supply, raw materials transport, building materials logistics, industrial logistics Hyderabad, bulk cargo transport, material handling services, construction materials distributor, mining materials supplier, aggregate supplier India, quarry materials, construction supply chain, industrial supply chain, material procurement services, bulk delivery services, construction materials Andhra Pradesh, building supplies South India, material transport services, heavy cargo logistics, construction equipment supplies, industrial raw materials, bulk material handling, construction project supplies, infrastructure project materials, roadway construction materials, concrete production materials, steel production raw materials',
+  authors: [{ name: 'Evolve Building Material Supplies Co.' }],
+  creator: 'Evolve Building Material Supplies Co.',
+  publisher: 'Evolve Building Material Supplies Co.',
   robots: 'index, follow',
   openGraph: {
-    title: 'Evolve Basics - Transport & Material Supply Solutions',
-    description: 'Your reliable partner for efficient transport solutions, sand supply, and material logistics across India.',
+    title: 'Evolve Building Material Supplies Co. - Transport & Material Supply Solutions',
+    description: 'Leading building materials supplier in Hyderabad, India. Professional sand supply, coal, limestone, gypsum, iron ore, and transport logistics for construction, infrastructure, and industrial projects across Telangana and Andhra Pradesh.',
     url: 'https://evolvebasics.in',
-    siteName: 'Evolve Basics',
+    siteName: 'Evolve Building Material Supplies Co.',
     locale: 'en_IN',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Evolve Basics - Transport Solutions',
-    description: 'Reliable transport and material supply solutions for industrial businesses and construction companies.',
+    title: 'Evolve Building Material Supplies Co. - Transport Solutions',
+    description: 'Leading supplier of construction materials, sand, coal, limestone & industrial transport services in Hyderabad. Serving construction & infrastructure projects across India.',
   },
 }
 

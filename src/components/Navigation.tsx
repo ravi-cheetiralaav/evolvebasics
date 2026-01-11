@@ -2,7 +2,8 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { Bars3Icon, XMarkIcon, TruckIcon } from '@heroicons/react/24/outline'
+import Image from 'next/image'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -17,18 +18,23 @@ export default function Navigation() {
   return (
     <nav className="glass-card fixed w-full z-50 top-4 left-4 right-4 mx-auto max-w-7xl">
       <div className="px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-3 group">
-              <div className="relative">
-                <TruckIcon className="h-8 w-8 text-red-600 group-hover:animate-truck-drive transition-all duration-300" />
-                <div className="absolute -right-1 top-1 w-6 h-1 bg-gradient-to-r from-red-500 to-transparent rounded opacity-70 group-hover:animate-speed-lines"></div>
-                <div className="absolute -right-2 top-3 w-4 h-0.5 bg-gradient-to-r from-red-400 to-transparent rounded opacity-50 group-hover:animate-speed-lines" style={{animationDelay: '0.1s'}}></div>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-xl font-bold gradient-text group-hover:animate-slide-right">Evolve Basics</span>
-                <span className="text-xs font-medium text-red-600 tracking-wide uppercase opacity-80 group-hover:opacity-100 transition-opacity duration-300">Speed Meets Trust</span>
+              <div className="flex flex-col items-start">
+                <div className="relative w-14 h-8 flex items-center justify-start">
+                  <Image 
+                    src="/images/logo.png" 
+                    alt="Evolve Building Material Supplies Co. Logo" 
+                    width={56} 
+                    height={32} 
+                    className="w-14 h-8 rounded object-contain group-hover:scale-110 transition-all duration-300"
+                    priority
+                  />
+                </div>
+                <span className="text-3xl font-bold text-red-600 group-hover:animate-slide-right leading-none -mt-1">EVOLVE</span>
+                <span className="text-[0.6rem] font-medium text-black tracking-wide uppercase leading-tight -mt-0.5">BUILDING MATERIAL SUPPLIES CO.</span>
               </div>
             </Link>
           </div>

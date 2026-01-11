@@ -61,7 +61,7 @@ export default function Page() {
 ## Business Domain Knowledge
 - **Core Services:** Sand supply, material supply (coal, limestone, gypsum, iron ore), transport logistics
 - **Target Audience:** Industrial businesses, ports, construction companies, B2C customers  
-- **Key Partners:** Stone Craft Developers, Trendset Projects, BuildQ, Geetha Engineering, etc.
+- **Key Partners:** Stone Craft Developers, Trendset Projects, Mahidhara Projects PVT LTD, Geetha Engineering, etc.
 - **Brand Voice:** "Reliable transport solutions with trust" - professional, trustworthy, efficient
 
 ## Development Workflow

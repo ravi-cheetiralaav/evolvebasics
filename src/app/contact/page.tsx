@@ -21,13 +21,13 @@ const contactInfo = [
   {
     icon: EnvelopeIcon,
     title: 'Email',
-    details: ['info@evolvebasics.in', 'sales@evolvebasics.in'],
+    details: ['evolvebasicsllp@gmail.com', 'General Inquiries'],
     description: 'Send us your requirements'
   },
   {
     icon: MapPinIcon,
     title: 'Location',
-    details: ['Your Business Address', 'City, State, PIN'],
+    details: ['Lanco Hills, Manikonda', 'Hyderabad, Telangana'],
     description: 'Visit our office'
   },
   {
@@ -102,8 +102,8 @@ export default function ContactPage() {
             Contact <span className="gradient-text">Us</span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Get in touch with our team for reliable transport solutions and material supply services. 
-            We are here to help you with all your logistics needs.
+            Get in touch with Evolve Building Material Supplies Co. for reliable transport solutions and building material supply services. 
+            We are here to help you with all your construction and logistics needs.
           </p>
         </div>
       </section>
@@ -314,16 +314,18 @@ export default function ContactPage() {
                 <div className="flex items-center mb-4">
                   <UserIcon className="h-8 w-8 text-red-600 mr-3" />
                   <h3 className="text-xl font-semibold text-gray-900">
-                    What to Include in Your Message
+                    Contact Management
                   </h3>
                 </div>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• Type and quantity of materials needed</li>
-                  <li>• Delivery location and timeline</li>
-                  <li>• Special handling requirements</li>
-                  <li>• Budget considerations</li>
-                  <li>• Ongoing partnership opportunities</li>
-                </ul>
+                <div className="text-gray-700 mb-4">
+                  <p className="font-semibold text-lg text-red-600">Hari Krishna Chitipothu</p>
+                  <p className="text-gray-600 mb-2">Managing Director</p>
+                  <p className="font-medium">📞 +91 88869 44456</p>
+                  <p className="font-medium">📧 evolvebasicsllp@gmail.com</p>
+                </div>
+                <p className="text-gray-600 text-sm">
+                  Direct contact with our Managing Director for strategic partnerships and major projects.
+                </p>
               </div>
               
               <div className="glass-card p-8">
@@ -334,12 +336,12 @@ export default function ContactPage() {
                   </h3>
                 </div>
                 <p className="text-gray-600 mb-4">
-                  Schedule a meeting with our team to discuss your requirements in detail.
+                  Schedule a meeting with our team to discuss your building material requirements in detail.
                 </p>
                 <div className="text-gray-700">
                   <p className="font-medium">Business Address:</p>
-                  <p>Your Complete Business Address</p>
-                  <p>City, State, PIN Code</p>
+                  <p>Lanco Hills, Manikonda</p>
+                  <p>Hyderabad, Telangana</p>
                 </div>
               </div>
             </div>

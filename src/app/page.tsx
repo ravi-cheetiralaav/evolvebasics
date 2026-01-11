@@ -70,7 +70,7 @@ const testimonials = [
 const partners = [
   'Stone Craft Developers Pvt Ltd',
   'Trendset Projects LLP',
-  'BuildQ',
+  'Mahidhara Projects PVT LTD',
   'Mark Creative & Digital Agency',
   'Siva Ram and Company',
   'Geetha Engineering Constructions Pvt Ltd',
@@ -78,7 +78,6 @@ const partners = [
   'Vaibhavi Projects',
   'Vaibhavi Infra Projects',
   'Navtej Infrastructure Pvt Ltd',
-  'Rize Developers',
 ]
 
 const galleryImages = [
@@ -175,16 +174,16 @@ export default function HomePage() {
               </div>
               
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-                Efficient Transport Solutions for{' '}
+                Building Material Solutions for{' '}
                 <span className="gradient-text">Everyone</span>
               </h1>
               
               <div className="mb-8">
                 <p className="text-2xl text-red-600 font-bold mb-4">
-                  Reliable transport solutions with trust
+                  Reliable building material supplies with trust
                 </p>
                 <p className="text-xl text-gray-600 leading-relaxed">
-                  Your reliable purchase partner for sand supply, material supply, and comprehensive transport solutions across India.
+                  Your reliable partner for sand supply, building materials, and comprehensive transport solutions. Serving construction companies across India.
                 </p>
               </div>
               
@@ -240,49 +239,57 @@ export default function HomePage() {
                   </div>
                 </div>
                 <div className="space-y-4">
-                  <div className="group cursor-pointer p-4 hover:bg-gradient-to-r hover:from-red-50 hover:to-transparent rounded-xl transition-all duration-300">
-                    <div className="flex items-center space-x-4">
-                      <div className="flex-shrink-0 w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center group-hover:bg-red-200 transition-colors duration-300">
-                        <MapIcon className="h-5 w-5 text-red-600" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <h4 className="text-base font-semibold text-gray-900 group-hover:text-red-700 transition-colors">Sand Supply & Delivery</h4>
+                  <Link href="/services" className="block">
+                    <div className="group cursor-pointer p-4 hover:bg-gradient-to-r hover:from-red-50 hover:to-transparent rounded-xl transition-all duration-300">
+                      <div className="flex items-center space-x-4">
+                        <div className="flex-shrink-0 w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center group-hover:bg-red-200 transition-colors duration-300">
+                          <MapIcon className="h-5 w-5 text-red-600" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <h4 className="text-base font-semibold text-gray-900 group-hover:text-red-700 transition-colors">Sand Supply & Delivery</h4>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                   
-                  <div className="group cursor-pointer p-4 hover:bg-gradient-to-r hover:from-red-50 hover:to-transparent rounded-xl transition-all duration-300">
-                    <div className="flex items-center space-x-4">
-                      <div className="flex-shrink-0 w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center group-hover:bg-red-200 transition-colors duration-300">
-                        <TruckIcon className="h-5 w-5 text-red-600" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <h4 className="text-base font-semibold text-gray-900 group-hover:text-red-700 transition-colors">Material Transportation</h4>
+                  <Link href="/services" className="block">
+                    <div className="group cursor-pointer p-4 hover:bg-gradient-to-r hover:from-red-50 hover:to-transparent rounded-xl transition-all duration-300">
+                      <div className="flex items-center space-x-4">
+                        <div className="flex-shrink-0 w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center group-hover:bg-red-200 transition-colors duration-300">
+                          <TruckIcon className="h-5 w-5 text-red-600" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <h4 className="text-base font-semibold text-gray-900 group-hover:text-red-700 transition-colors">Material Transportation</h4>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                   
-                  <div className="group cursor-pointer p-4 hover:bg-gradient-to-r hover:from-red-50 hover:to-transparent rounded-xl transition-all duration-300">
-                    <div className="flex items-center space-x-4">
-                      <div className="flex-shrink-0 w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center group-hover:bg-red-200 transition-colors duration-300">
-                        <CubeIcon className="h-5 w-5 text-red-600" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <h4 className="text-base font-semibold text-gray-900 group-hover:text-red-700 transition-colors">Construction Materials</h4>
+                  <Link href="/services" className="block">
+                    <div className="group cursor-pointer p-4 hover:bg-gradient-to-r hover:from-red-50 hover:to-transparent rounded-xl transition-all duration-300">
+                      <div className="flex items-center space-x-4">
+                        <div className="flex-shrink-0 w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center group-hover:bg-red-200 transition-colors duration-300">
+                          <CubeIcon className="h-5 w-5 text-red-600" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <h4 className="text-base font-semibold text-gray-900 group-hover:text-red-700 transition-colors">Construction Materials</h4>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                   
-                  <div className="group cursor-pointer p-4 hover:bg-gradient-to-r hover:from-red-50 hover:to-transparent rounded-xl transition-all duration-300">
-                    <div className="flex items-center space-x-4">
-                      <div className="flex-shrink-0 w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center group-hover:bg-red-200 transition-colors duration-300">
-                        <RocketLaunchIcon className="h-5 w-5 text-red-600" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <h4 className="text-base font-semibold text-gray-900 group-hover:text-red-700 transition-colors">Logistics Solutions</h4>
+                  <Link href="/services" className="block">
+                    <div className="group cursor-pointer p-4 hover:bg-gradient-to-r hover:from-red-50 hover:to-transparent rounded-xl transition-all duration-300">
+                      <div className="flex items-center space-x-4">
+                        <div className="flex-shrink-0 w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center group-hover:bg-red-200 transition-colors duration-300">
+                          <RocketLaunchIcon className="h-5 w-5 text-red-600" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <h4 className="text-base font-semibold text-gray-900 group-hover:text-red-700 transition-colors">Logistics Solutions</h4>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 </div>
                 
                 {/* View All Services Link */}

@@ -6,14 +6,18 @@ import {
   ShieldCheckIcon,
   GlobeAltIcon,
   CheckCircleIcon,
-  ArrowRightIcon
+  ArrowRightIcon,
+  ChatBubbleLeftRightIcon,
+  DocumentMagnifyingGlassIcon,
+  PlayIcon,
+  ClipboardDocumentCheckIcon
 } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 
 const mainServices = [
   {
     icon: CubeIcon,
-    title: 'Sand Supply',
+    title: 'Professional Sand Supply',
     description: 'High-quality sand supply for construction and industrial projects',
     features: [
       'Premium quality construction sand',
@@ -27,7 +31,7 @@ const mainServices = [
   },
   {
     icon: CogIcon,
-    title: 'Material Supply',
+    title: 'Professional Material Supply',
     description: 'Comprehensive supply of industrial materials and raw materials',
     features: [
       'Coal supply for power plants',
@@ -41,7 +45,7 @@ const mainServices = [
   },
   {
     icon: TruckIcon,
-    title: 'Transport Solutions',
+    title: 'Professional Transport Solutions',
     description: 'Efficient logistics and transport services for all material types',
     features: [
       'Heavy-duty transport vehicles',
@@ -76,23 +80,27 @@ const additionalServices = [
 const processSteps = [
   {
     step: '01',
+    icon: ChatBubbleLeftRightIcon,
     title: 'Consultation',
     description: 'Understanding your specific material and transport requirements'
   },
   {
     step: '02',
+    icon: DocumentMagnifyingGlassIcon,
     title: 'Planning',
     description: 'Developing customized logistics solutions for your needs'
   },
   {
     step: '03',
-    title: 'Execution',
-    description: 'Efficient delivery with real-time tracking and updates'
+    icon: ClipboardDocumentCheckIcon,
+    title: 'Quality Check',
+    description: 'Ensuring quality standards and material specifications before delivery'
   },
   {
     step: '04',
-    title: 'Quality Check',
-    description: 'Ensuring quality standards and customer satisfaction'
+    icon: PlayIcon,
+    title: 'Execution',
+    description: 'Efficient delivery with real-time tracking and updates'
   },
 ]
 
@@ -136,7 +144,7 @@ export default function ServicesPage() {
               <div key={index} className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-cols-2' : ''}`}>
                 <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
                   <div className="flex items-center mb-6">
-                    <service.icon className="h-12 w-12 text-red-600 mr-4" />
+                    <service.icon className="h-12 w-12 text-red-600 mr-4 animate-bounce-gentle hover:animate-pulse transition-all duration-300" />
                     <h3 className="text-3xl font-bold text-gray-900">{service.title}</h3>
                   </div>
                   <p className="text-xl text-gray-600 mb-8">
@@ -168,11 +176,11 @@ export default function ServicesPage() {
                 </div>
                 
                 <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
-                  <div className="glass-card p-8 h-full">
+                  <div className="glass-card p-8 h-full hover:shadow-xl transition-all duration-300">
                     <div className="text-center">
-                      <service.icon className="h-24 w-24 text-red-600 mx-auto mb-6" />
+                      <service.icon className="h-24 w-24 text-red-600 mx-auto mb-6 animate-pulse hover:animate-bounce-gentle transition-all duration-500 hover:scale-110" />
                       <h4 className="text-xl font-semibold text-gray-900 mb-4">
-                        Professional {service.title}
+                        {service.title}
                       </h4>
                       <p className="text-gray-600">
                         Trusted by leading companies across India for reliable and efficient service delivery.
@@ -201,7 +209,7 @@ export default function ServicesPage() {
           <div className="grid md:grid-cols-3 gap-8">
             {additionalServices.map((service, index) => (
               <div key={index} className="glass-card p-8 text-center group hover:scale-105 transition-transform duration-200">
-                <service.icon className="h-16 w-16 text-red-600 mx-auto mb-6" />
+                <service.icon className="h-16 w-16 text-red-600 mx-auto mb-6 group-hover:animate-bounce-gentle transition-all duration-300 animate-pulse" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   {service.title}
                 </h3>
@@ -229,9 +237,12 @@ export default function ServicesPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step, index) => (
               <div key={index} className="text-center">
-                <div className="glass-card p-6 mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-red-600 to-red-800 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-                    {step.step}
+                <div className="glass-card p-6 mb-6 hover:shadow-xl transition-all duration-300 hover:scale-105">
+                  <div className="w-20 h-20 bg-gradient-to-r from-red-600 to-red-800 text-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                    <div className="text-center">
+                      <step.icon className="h-6 w-6 mx-auto mb-1" />
+                      <div className="text-sm font-bold">{step.step}</div>
+                    </div>
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">
                     {step.title}
